@@ -7,6 +7,7 @@ import enUS from 'rc-calendar/lib/locale/en_US';
 import TimePickerPanel from 'rc-time-picker/lib/Panel';
 import dateFormat from 'dateformat';
 import moment from 'moment';
+import assign from 'object-assign';
 import 'moment/locale/zh-cn';
 import 'moment/locale/en-gb';
 import 'rc-time-picker/assets/index.css';
@@ -14,7 +15,7 @@ import 'rc-calendar/assets/index.css';
 
 const Styles = {
   frame: {
-    zIndex: 1000,
+    zIndex: 1,
     position: 'relative',
     width: 900,
     margin: '20px auto',
@@ -45,25 +46,30 @@ class CalendarControl extends React.Component {
     return current.valueOf() < date.valueOf();  // can not select days before today
   }
   onStandaloneSelect(value) {
-    const time = dateFormat(value.toDate(), 'yyyy-mm-dd'); //yyyy-mm-dd TT h:MM
-    console.log('onStandaloneSelect', time);
+    if(value){
+      const time = dateFormat(value.toDate(), 'yyyy-mm-dd'); //yyyy-mm-dd TT h:MM
+      console.log('onStandaloneSelect', time);
+    }
     // console.log(value && value.format(format));
   }
 
   onStandaloneChange(value) {
-    const time = dateFormat(value.toDate(), 'yyyy-mm-dd'); //yyyy-mm-dd TT h:MM
-
-    console.log('onStandaloneChange', time);
+    if(value){
+      const time = dateFormat(value.toDate(), 'yyyy-mm-dd'); //yyyy-mm-dd TT h:MM
+      console.log('onStandaloneChange', time);
+    }
     // console.log(value && value.format(format));
   }
   render() {
     const {
+            props,
             getFormat,
             disabledTime,
             disabledDate,
             onStandaloneSelect,
             onStandaloneChange
           } = this,
+          {frameStyle} = props,
           cn = location.search.indexOf('cn') !== -1,
           timePickerElement = <TimePickerPanel defaultValue={moment('00:00:00', 'HH:mm:ss')} />;
     let now = moment();
@@ -75,7 +81,7 @@ class CalendarControl extends React.Component {
     }
 
     return (
-      <div style={Styles.frame}>
+      <div style={assign({}, Styles.frame, frameStyle)}>
         <Calendar
           showToday
           showWeekNumber={false}

@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Card from 'Controls/card/card';
+import HomeModule from 'Modules/home';
 
 class Index extends React.Component {
   render() {
   	console.log(this.props);
     return (
     	<div>
-	      <Card content={'<div>ff</div>'}/>
+	      <HomeModule/>
       </div>
 
     );

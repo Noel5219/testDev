@@ -1,0 +1,109 @@
+/*
+  -- blue --
+  #022A74 藍
+  #707070 灰
+  #B4B4B5 淺灰
+  #323233 深灰
+
+*/
+
+.nav-top{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.nav-top a{
+  text-decoration: none;
+}
+
+.nav-top .logo{
+  margin: 0px 20px;
+  color: #FFF;
+  font-weight: 900;
+}
+
+.nav-top .logo,
+.nav-top .item{
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+.nav-top .item{
+  display: none !important;
+}
+.nav-top .list{
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 0px;
+}
+.nav-top .menuIcon{
+  height: 50px;
+  width: 47px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+.nav-top .menuIcon img{
+  position: absolute;
+  right: 10px;
+  top: 25%;
+}
+.nav-top .menuIcon:hover{
+  background-color: #B4B4B5;
+}
+
+.nav-top .listFrame{
+  height: 100%;
+  width: 70%;
+  max-width: 300px;
+  position: fixed;
+  top: 50;
+  right: 0;
+  z-index: 1;
+}
+.nav-top-blue,
+.nav-top-blue .listFrame{
+  background-color: #022A74;
+}
+.nav-top-blue a{
+  color: #FFF;
+}
+.nav-top-blue a:hover{
+  background-color: #FFF;
+  color: #707070;
+}
+
+.nav-top-red,
+.nav-top-red .listFrame{
+  background-color: red;
+  color: #FFF;
+}
+
+@media (min-width: 576px) {
+  .nav-top .menuIcon,
+  .nav-top .listFrame{
+    display: none;
+  }
+  .nav-top .item{
+    display: initial !important;
+  }
+}
+
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 992px) {
+  
+}
+
+@media (min-width: 1200px) {
+  
+}

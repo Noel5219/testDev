@@ -1,0 +1,15 @@
+[
+	{
+	    "title": "Home",
+	    "toPage": "/",
+	    "needLogin": false
+	}, {
+	    "title": "About",
+	    "toPage": "/about",
+	    "needLogin": false
+	}, {
+	    "title": "Users",
+	    "toPage": "/users",
+	    "needLogin": false
+	}
+]

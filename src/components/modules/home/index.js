@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Card from 'Controls/card/card';
+// import Card from 'Controls/card/card';
+import Calendar from 'Controls/calendar/calendar';
 // import Pie2D from 'Controls/charts/pie2d';
 // import Bullet from 'Controls/charts/bullet';
-
 class Home extends React.Component {
   render() {
     console.log(this.props);
     return (
       <div>
+        <Calendar />
         {
           // <Card content={'<div>ff</div>'}/>
           // <Pie2D

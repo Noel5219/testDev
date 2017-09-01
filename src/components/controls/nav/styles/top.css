@@ -32,9 +32,6 @@
   padding: 0px 15px;
 }
 
-.nav-top .item{
-  display: none !important;
-}
 .nav-top .list{
   width: 100%;
   display: block;
@@ -86,13 +83,16 @@
   color: #FFF;
 }
 
+@media (max-width: 575px) {
+  .nav-top .item{
+    display: none !important;
+  }
+}
+
 @media (min-width: 576px) {
   .nav-top .menuIcon,
   .nav-top .listFrame{
     display: none;
-  }
-  .nav-top .item{
-    display: initial !important;
   }
 }
 

@@ -8,7 +8,7 @@ class Index extends React.Component {
   	console.log(this.props);
     return (
       <div style={{height: '400px', backgroundColor: '#888'}}>
-	      <Link to={`/index`}>user</Link>
+	      <Link to={`/index`}>回首頁</Link>
       </div>
 
     );

@@ -1,0 +1,10 @@
+.menu{
+	height: 100%;
+	width: 50px;
+	background-color: #ccc;
+}
+
+.menu-item{
+	display: block;
+	padding: 15px 10px;
+}

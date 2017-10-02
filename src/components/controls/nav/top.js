@@ -26,7 +26,7 @@ class NavTop extends React.Component {
         {
           Items.map((item, index)=>{
             return item.needLogin ? null : (
-              <Link key={index} to={item.toPage} className='item'>{item.title}</Link>
+              <Link key={index} to={item.toPage} className='nav-item'>{item.title}</Link>
             );
           })
         }
@@ -45,7 +45,7 @@ class NavTop extends React.Component {
               {
                 Items.map((item, index)=>{
                   return item.needLogin ? null : (
-                    <Link key={index} to={item.toPage} className='list'>{item.title}</Link>
+                    <Link key={index} to={item.toPage} className='nav-list'>{item.title}</Link>
                   );
                 })
               }

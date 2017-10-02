@@ -25,14 +25,14 @@
 }
 
 .nav-top .logo,
-.nav-top .item{
+.nav-top .nav-item{
   height: 50px;
   line-height: 50px;
   display: inline-block;
   padding: 0px 15px;
 }
 
-.nav-top .list{
+.nav-top .nav-list{
   width: 100%;
   display: block;
   text-align: center;
@@ -84,7 +84,7 @@
 }
 
 @media (max-width: 575px) {
-  .nav-top .item{
+  .nav-top .nav-item{
     display: none !important;
   }
 }

@@ -7,7 +7,8 @@ import IndexPage from 'Pages/index';
 import AboutPage from 'Pages/about';
 import UsersPage from 'Pages/users';
 import UserPage from 'Pages/user';
-import NavTop from 'Controls/nav/top';
+import MenuLeft from 'Controls/menu/menu';
+// import NavTop from 'Controls/nav/top';
 import 'Styles/global.css';
 
 const themes = 'blue';
@@ -17,7 +18,10 @@ const Root = React.createClass({
     return (
 			<Router>
 		  	<div>
-		  		<NavTop themes={themes} />
+		  		{
+		  			// <NavTop themes={themes} />
+		  		}
+		  		<MenuLeft themes={themes}/>
 		  		<div style={{paddingTop: '50px'}}>
 			      <Route exact path='/' component={IndexPage}/>
 			      <Route path='/about' component={AboutPage}/>
